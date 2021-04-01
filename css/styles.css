@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+:root {
+  font-size: 16px;
+  font-family: "Josefin Sans";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(135deg, white, #fff5f5);
+}
+
+.content {
+  max-width: 375px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 600px) {
+  .content {
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .content {
+    display: grid;
+    justify-self: center;
+    max-width: 1440px;
+    grid-template-columns: 1fr 610px;
+    grid-template-rows: 800px;
+    max-height: 800px;
+  }
+}
+
+.left {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  .left {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    width: 100%;
+  }
+}
+
+.rigth {
+  display: none;
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  .rigth {
+    display: block;
+  }
+  .rigth__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.logo {
+  width: 100%;
+  padding: 2em;
+}
+@media only screen and (min-width: 1000px) {
+  .logo {
+    padding: 5em 8em;
+  }
+}
+
+.image {
+  width: 100%;
+}
+.image__hero {
+  width: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width: 1000px) {
+  .image__hero {
+    display: none;
+  }
+}
+
+.wellcome {
+  width: 100%;
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1000px) {
+  .wellcome {
+    padding: 3em 12em 3em 8em;
+  }
+}
+.wellcome__title {
+  width: 100%;
+}
+.wellcome__title__top, .wellcome__title__bottom {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5em;
+  letter-spacing: 0.3em;
+}
+@media only screen and (min-width: 1000px) {
+  .wellcome__title__top, .wellcome__title__bottom {
+    font-size: 4em;
+    text-align: start;
+  }
+}
+.wellcome__title__top {
+  color: #ce9797;
+  font-weight: 300;
+}
+.wellcome__title__bottom {
+  color: #413a3a;
+  font-weight: 600;
+}
+.wellcome__description {
+  margin: 2em 0;
+  text-align: center;
+  line-height: 1.5;
+  color: #ce9797;
+}
+@media only screen and (min-width: 1000px) {
+  .wellcome__description {
+    text-align: start;
+  }
+}
+.wellcome__form {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.wellcome__form__email {
+  width: 100%;
+  padding: 1.5em;
+  height: 3.5em;
+  border-radius: 100px;
+  border: 1px solid #ce9797;
+  outline: none;
+  font-family: "Josefin Sans";
+  color: #413a3a;
+  transition: 1s border ease;
+}
+.wellcome__form__email.error {
+  border: 2px solid #f83030;
+}
+.wellcome__form__email:invalid {
+  box-shadow: none;
+}
+.wellcome__form__email::placeholder {
+  color: #ce9797;
+}
+.wellcome__form__error {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  opacity: 0;
+  transition: 1s opacity ease;
+}
+.wellcome__form__error.active {
+  opacity: 1;
+}
+.wellcome__form__submit {
+  position: absolute;
+  right: 0;
+  width: 6em;
+  height: 3.5em;
+  transition: 0.2s width linear;
+  border: 0;
+  border-radius: 100px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+.wellcome__form__submit:hover {
+  width: 4em;
+  cursor: pointer;
+  box-shadow: 0 0 1em rgba(249, 98, 98, 0.7);
+}
+.wellcome__response {
+  color: #f83030;
+  padding: 0.5em 2em;
+  font-size: 0.8em;
+  opacity: 0;
+  transition: 1s opacity ease;
+}
+.wellcome__response.active {
+  opacity: 1;
+}
