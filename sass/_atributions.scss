@@ -1,0 +1,15 @@
+.attribution {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.5em;
+    color: $Dark_Grayish_Red;
+    background-color: rgba($Dark_Grayish_Red, 0.2);
+
+  & a {
+    color: $Soft_Red;
+  }
+}
