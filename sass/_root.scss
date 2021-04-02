@@ -10,7 +10,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     width: 100%;
     min-height: 100vh;
@@ -23,25 +22,24 @@ body {
     );
 }
 .content {
-    // border: 1px solid red;
     max-width: 375px;
     margin: 0 auto;
 
     position: relative;
-    
+
     @media only screen and (min-width: 600px) {
-       
         max-width: 500px;
-        
-        // border: 1px solid red;
     }
     @media only screen and (min-width: 1000px) {
         display: grid;
         justify-self: center;
-        max-width: 1440px;
-        grid-template-columns: 1fr 610px;
+        max-width: 1400px;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 800px;
         max-height: 800px;
-        // border: 1px solid red;
+    }
+    @media only screen and (min-width: 1440px) {
+        max-width: 1440px;
+        grid-template-columns: 1fr 610px;
     }
 }

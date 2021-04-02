@@ -32,10 +32,16 @@ body {
   .content {
     display: grid;
     justify-self: center;
-    max-width: 1440px;
-    grid-template-columns: 1fr 610px;
+    max-width: 1400px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 800px;
     max-height: 800px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .content {
+    max-width: 1440px;
+    grid-template-columns: 1fr 610px;
   }
 }
 
@@ -67,6 +73,7 @@ body {
 .rigth {
   display: none;
   width: 100%;
+  overflow: hidden;
 }
 @media only screen and (min-width: 1000px) {
   .rigth {
@@ -74,7 +81,8 @@ body {
   }
   .rigth__image {
     display: block;
-    height: 100%;
+    margin-left: auto;
+    min-width: 100%;
     object-fit: cover;
   }
 }
@@ -85,7 +93,7 @@ body {
 }
 @media only screen and (min-width: 1000px) {
   .logo {
-    padding: 5em 8em;
+    padding: 4em 9em;
   }
 }
 
@@ -110,7 +118,7 @@ body {
 }
 @media only screen and (min-width: 1000px) {
   .wellcome {
-    padding: 3em 12em 3em 8em;
+    padding: 3em 12em 3em 9em;
   }
 }
 .wellcome__title {
@@ -144,6 +152,7 @@ body {
 }
 @media only screen and (min-width: 1000px) {
   .wellcome__description {
+    margin: 1em 0 3em 0;
     text-align: start;
   }
 }

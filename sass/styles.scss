@@ -3,7 +3,6 @@
 @import "./atributions";
 .left {
     width: 100%;
-
     @media only screen and (min-width: 1000px) {
         background-image: url("../images/bg-pattern-desktop.svg");
         width: 100%;
@@ -12,13 +11,14 @@
 .rigth {
     display: none;
     width: 100%;
+    overflow: hidden;
     @media only screen and (min-width: 1000px) {
         display: block;
-        // border: 1px solid green;
 
         &__image {
             display: block;
-            height: 100%;
+            margin-left: auto;
+            min-width: 100%;
             object-fit: cover;
         }
     }
@@ -28,17 +28,16 @@
     width: 100%;
     padding: 2em;
     @media only screen and (min-width: 1000px) {
-        // border: 1px solid red;
-        padding: 5em 8em;
+        padding: 4em 9em;
     }
 }
 
 .image {
     width: 100%;
-    
+
     &__hero {
         width: 100%;
-       
+
         object-fit: cover;
         @media only screen and (min-width: 1000px) {
             display: none;
@@ -53,8 +52,7 @@
     flex-direction: column;
 
     @media only screen and (min-width: 1000px) {
-        // border: 1px solid red;
-        padding: 3em 12em 3em 8em;
+        padding: 3em 12em 3em 9em;
     }
     &__title {
         width: 100%;
@@ -65,7 +63,6 @@
             font-size: 2.5em;
             letter-spacing: 0.3em;
             @media only screen and (min-width: 1000px) {
-                // border: 1px solid red;
                 font-size: 4em;
                 text-align: start;
             }
@@ -85,6 +82,7 @@
         line-height: 1.5;
         color: $Desaturated_Red;
         @media only screen and (min-width: 1000px) {
+            margin: 1em 0 3em 0;
             text-align: start;
         }
     }
@@ -93,7 +91,6 @@
         position: relative;
         width: 100%;
         display: flex;
-        // border: 1px solid red;
 
         &__email {
             width: 100%;
@@ -135,9 +132,7 @@
             opacity: 0;
             transition: 1s opacity ease;
             &.active {
-               
                 opacity: 1;
-                
             }
         }
         &__submit {
@@ -146,7 +141,7 @@
             width: 6em;
             height: 3.5em;
             transition: 0.2s width linear;
-            border: 0 ;
+            border: 0;
             border-radius: 100px;
             background-image: linear-gradient(
                 135deg,
@@ -157,25 +152,20 @@
             &:hover {
                 width: 4em;
                 cursor: pointer;
-                
-                
-                box-shadow: 0 0 1em rgba($Soft_Red, 0.7)
+
+                box-shadow: 0 0 1em rgba($Soft_Red, 0.7);
             }
         }
     }
 
     &__response {
         color: darken($Soft_Red, 10%);
-        // border: 1px solid red;
         padding: 0.5em 2em;
         font-size: 0.8em;
         opacity: 0;
         transition: 1s opacity ease;
-        &.active{
-           
+        &.active {
             opacity: 1;
         }
     }
 }
-
-
